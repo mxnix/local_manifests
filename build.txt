@@ -1,0 +1,7 @@
+crave run --no-patch -- "rm -rf .repo/local_manifests; \
+repo init -u https://github.com/The-Pixel-Project/manifest -b fourteen-qpr3 -g default,-mips,-darwin,-notdefault --git-lfs; \
+git clone https://github.com/mxnix/local_manifests --depth 1 -b PP .repo/local_manifests; \ 
+/opt/crave/resync.sh; \
+. build/envsetup.sh; \
+lunch aosp_mi439-userdebug; \ 
+make bacon"
